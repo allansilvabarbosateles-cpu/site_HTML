@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grandes Mulheres da Ciência</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0ff;
+            color: #25213b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #512da8, #9575cd);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #352064;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e1bee7;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .introducao {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .introducao h2 {
+            color: #512da8;
+            margin-bottom: 10px;
+        }
+
+        .cientistas {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px #00000015;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            color: #673ab7;
+            margin-bottom: 10px;
+        }
+
+        .area {
+            display: inline-block;
+            background-color: #ede7f6;
+            color: #512da8;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .card button {
+            background-color: #673ab7;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .card button:hover {
+            background-color: #4527a0;
+        }
+
+        .detalhes {
+            display: none;
+            margin-top: 12px;
+            border-top: 1px solid #ddd;
+            padding-top: 12px;
+        }
+
+        .mensagem {
+            background-color: #e8eaf6;
+            padding: 25px;
+            margin-top: 35px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #352064;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 29px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="inicio">
+        <h1>Grandes Mulheres da Ciência</h1>
+        <p>Conheça mulheres que transformaram o mundo com suas descobertas.</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#cientistas">Cientistas</a>
+        <a href="#importancia">Importância</a>
+    </nav>
+
+    <main>
+
+        <section class="introducao">
+            <h2>Mulheres que fizeram história</h2>
+            <p>
+                Ao longo da história, muitas mulheres contribuíram
+                para o avanço da ciência, da medicina, da matemática
+                e da tecnologia. Conheça algumas delas!
+            </p>
+        </section>
+
+        <section class="cientistas" id="cientistas">
+
+            <article class="card">
+                <h3>Marie Curie</h3>
+                <span class="area">Física e Química</span>
+                <p>
+                    Foi pioneira nos estudos sobre radioatividade
+                    e ganhou dois Prêmios Nobel em áreas científicas
+                    diferentes.
+                </p>
+                <button onclick="mostrarDetalhes('marie')">
+                    Saiba mais
+                </button>
+                <div class="detalhes" id="marie">
+                    <p>
+                        Marie Curie foi a primeira mulher a ganhar
+                        um Prêmio Nobel. Suas pesquisas contribuíram
+                        para o desenvolvimento da ciência e da medicina.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Ada Lovelace</h3>
+                <span class="area">Matemática e Computação</span>
+                <p>
+                    É considerada uma das pioneiras da programação
+                    por seu trabalho com a máquina analítica de
+                    Charles Babbage.
+                </p>
+                <button onclick="mostrarDetalhes('ada')">
+                    Saiba mais
+                </button>
+                <div class="detalhes" id="ada">
+                    <p>
+                        No século XIX, Ada escreveu um algoritmo
+                        destinado a ser executado por uma máquina.
+                        Seu trabalho antecipou ideias importantes
+                        da programação moderna.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Katherine Johnson</h3>
+                <span class="area">Matemática e Astronomia</span>
+                <p>
+                    Realizou cálculos fundamentais para missões
+                    espaciais da NASA, contribuindo para a exploração
+                    humana do espaço.
+                </p>
+                <button onclick="mostrarDetalhes('katherine')">
+                    Saiba mais
+                </button>
+                <div class="detalhes" id="katherine">
+                    <p>
+                        Seus cálculos ajudaram a determinar trajetórias
+                        de voos espaciais, incluindo a missão de John
+                        Glenn em 1962.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Rosalind Franklin</h3>
+                <span class="area">Química e Biologia</span>
+                <p>
+                    Suas pesquisas com imagens de difração de raios X
+                    foram fundamentais para compreender a estrutura
+                    do DNA.
+                </p>
+                <button onclick="mostrarDetalhes('rosalind')">
+                    Saiba mais
+                </button>
+                <div class="detalhes" id="rosalind">
+                    <p>
+                        A imagem conhecida como Fotografia 51 forneceu
+                        evidências importantes sobre a estrutura
+                        helicoidal do DNA.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Bertha Lutz</h3>
+                <span class="area">Biologia</span>
+                <p>
+                    Cientista brasileira reconhecida por suas pesquisas
+                    sobre anfíbios e por sua atuação na defesa dos
+                    direitos das mulheres.
+                </p>
+                <button onclick="mostrarDetalhes('bertha')">
+                    Saiba mais
+                </button>
+                <div class="detalhes" id="bertha">
+                    <p>
+                        Além de trabalhar como pesquisadora no Museu
+                        Nacional, Bertha teve papel importante na luta
+                        pelo direito das mulheres ao voto no Brasil.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>Jane Goodall</h3>
+                <span class="area">Primatologia</span>
+                <p>
+                    Ficou conhecida por seus estudos sobre chimpanzés
+                    e seu trabalho em defesa dos animais e do meio
+                    ambiente.
+                </p>
+                <button onclick="mostrarDetalhes('jane')">
+                    Saiba mais
+                </button>
+                <div class="detalhes" id="jane">
+                    <p>
+                        Suas observações ajudaram a ampliar o
+                        conhecimento sobre o comportamento dos
+                        chimpanzés e sua relação com o ambiente.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="mensagem" id="importancia">
+            <h2>Por que essas cientistas são importantes?</h2>
+            <p>
+                Elas mostram que a curiosidade, a dedicação e o
+                conhecimento podem transformar a sociedade.
+                Valorizar as mulheres na ciência é incentivar
+                novas descobertas e garantir oportunidades para todos.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto educativo: Grandes Mulheres da Ciência</p>
+        <p>Feito para valorizar a ciência e suas pesquisadoras.</p>
+    </footer>
+
+    <script>
+        function mostrarDetalhes(id) {
+            const detalhes = document.getElementById(id);
+
+            if (detalhes.style.display === "block") {
+                detalhes.style.display = "none";
+            } else {
+                detalhes.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
